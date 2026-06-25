@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Whisper model cache
+.cache/
+attendance_*.csv
