@@ -24,6 +24,11 @@ pip install -r requirements.txt
 
 ## Run
 
+Easiest — double-click **`run.bat`** (or run `.\run.ps1` in PowerShell). It creates
+the venv, installs dependencies on first launch, and starts the app.
+
+Or manually:
+
 ```bash
 streamlit run app.py
 ```
