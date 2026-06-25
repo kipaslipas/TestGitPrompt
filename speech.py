@@ -12,7 +12,7 @@ import tempfile
 _MODEL_CACHE: dict = {}
 
 
-def _get_model(model_size: str = "base"):
+def _get_model(model_size: str = "tiny"):
     if model_size not in _MODEL_CACHE:
         # Imported lazily so importing this module is cheap and the unit
         # tests for matcher/attendance don't require faster-whisper.
@@ -24,7 +24,7 @@ def _get_model(model_size: str = "base"):
     return _MODEL_CACHE[model_size]
 
 
-def transcribe_bytes(audio_bytes: bytes, model_size: str = "base") -> str:
+def transcribe_bytes(audio_bytes: bytes, model_size: str = "tiny") -> str:
     """Transcribe raw audio file bytes (e.g. a WAV from st.audio_input)."""
     model = _get_model(model_size)
 

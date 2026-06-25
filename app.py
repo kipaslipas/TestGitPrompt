@@ -66,8 +66,9 @@ with st.sidebar:
 
     st.divider()
     model_size = st.selectbox(
-        "Whisper model", ["tiny", "base", "small"], index=1,
-        help="Larger = more accurate but slower. Downloads once on first use.",
+        "Whisper model", ["tiny", "base", "small"], index=0,
+        help="Larger = more accurate but slower/heavier. 'tiny' is the safest "
+        "default on Streamlit Cloud's free tier (~1 GB RAM). Downloads once.",
     )
 
 
